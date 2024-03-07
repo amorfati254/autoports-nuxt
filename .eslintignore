@@ -5,3 +5,4 @@ schema
 sw.js
 package.json
 *.md
+*.code-workspace
