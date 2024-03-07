@@ -1,0 +1,30 @@
+{
+    "nuxtr.defaultPackageManager": "Bun",
+    "nuxtr.piniaFiles.defaultTemplate": "setup",
+    "nuxtr.vueFiles.firstTag": "script",
+    "nuxtr.vueFiles.style.alwaysScoped": true,
+    "nuxtr.vueFiles.style.defaultLanguage": "postcss",
+    "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "ui:\\s*{([^)]*)\\s*}",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "/\\*ui\\*/\\s*{([^;]*)}",
+            ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+    ],
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        "ui"
+    ]
+}
