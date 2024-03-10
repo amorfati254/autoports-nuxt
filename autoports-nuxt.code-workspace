@@ -8,8 +8,8 @@
 		"nuxtr.defaultPackageManager": "Bun",
 		"nuxtr.piniaFiles.defaultTemplate": "setup",
 		"nuxtr.vueFiles.firstTag": "script",
-		"nuxtr.vueFiles.style.alwaysScoped": true,
-		"nuxtr.vueFiles.style.defaultLanguage": "postcss",
+		"nuxtr.vueFiles.style.alwaysScoped": false,
+		"nuxtr.vueFiles.style.defaultLanguage": "css",
 		"tailwindCSS.experimental.configFile": "tailwind.config.ts",
 		"files.associations": {
 			"*.css": "tailwindcss"
@@ -32,6 +32,8 @@
 		],
 		"editor.quickSuggestions": {
 			"strings": true
-		}
+		},
+		"nuxtr.openItemsAfterCreation": true,
+		"nuxtr.vueFiles.style.addStyleTag": false
 	}
 }
