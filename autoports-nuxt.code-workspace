@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"nuxtr.defaultPackageManager": "Bun",
+		"nuxtr.defaultPackageManager": "pnpm",
 		"nuxtr.piniaFiles.defaultTemplate": "setup",
 		"nuxtr.vueFiles.firstTag": "script",
 		"nuxtr.vueFiles.style.alwaysScoped": false,
@@ -34,6 +34,76 @@
 			"strings": true
 		},
 		"nuxtr.openItemsAfterCreation": true,
-		"nuxtr.vueFiles.style.addStyleTag": false
+		"nuxtr.vueFiles.style.addStyleTag": false,
+		"editor.lineNumbers": "on",
+		"eslint.ignoreUntitled": true,
+		"typescript.tsdk": "node_modules/typescript/lib",
+		// Enable the ESlint flat config support
+		"eslint.experimental.useFlatConfig": true,
+		// Disable the default formatter, use eslint instead
+		// "prettier.enable": false,
+		"editor.formatOnSave": true,
+		// Auto fix
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "always",
+			"source.organizeImports": "explicit"
+		},
+		// // Silent the stylistic rules in you IDE, but still auto fix them
+		// "eslint.rules.customizations": [
+		// 	{
+		// 		"rule": "style/*",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "format/*",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-indent",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-spacing",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-spaces",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-order",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-dangle",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*-newline",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*quotes",
+		// 		"severity": "off"
+		// 	},
+		// 	{
+		// 		"rule": "*semi",
+		// 		"severity": "off"
+		// 	}
+		// ],
+		// Enable eslint for all supported languages
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"vue",
+			"html",
+			"markdown",
+			"json",
+			"jsonc",
+			"yaml",
+			"toml"
+		]
 	}
 }
