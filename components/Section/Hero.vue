@@ -5,7 +5,7 @@
 //   heroImage: { src: string, alt: string }
 // }>()
 // const { data } = await useAsyncData('hero', () => queryContent('home', 'sections', 'hero').findOne())
-const { heroImage, headline, subHeadline } = useAppConfig()
+const { content: { index: { heroSection: { headline, subHeadline, heroImage } } } } = useAppConfig()
 </script>
 
 <template>
