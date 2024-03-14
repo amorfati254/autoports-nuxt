@@ -4,7 +4,8 @@
 //   subHeadline?: string
 //   heroImage: { src: string, alt: string }
 // }>()
-const { data } = await useAsyncData('hero', () => queryContent('home', 'sections', 'hero').findOne())
+// const { data } = await useAsyncData('hero', () => queryContent('home', 'sections', 'hero').findOne())
+const { heroImage, headline, subHeadline } = useAppConfig()
 </script>
 
 <template>
@@ -16,10 +17,10 @@ const { data } = await useAsyncData('hero', () => queryContent('home', 'sections
         <h1
           class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white"
         >
-          {{ data?.headline }}
+          {{ headline }}
         </h1>
         <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">
-          {{ data?.subHeadline }}
+          {{ subHeadline }}
         </p>
 
         <div
@@ -196,8 +197,8 @@ const { data } = await useAsyncData('hero', () => queryContent('home', 'sections
       <div class="lg:col-span-4 mt-10 lg:mt-0">
         <img
           class="w-full rounded-xl"
-          :src="data?.heroImage.src"
-          :alt="data?.heroImage.alt"
+          :src="heroImage.src"
+          :alt="heroImage.alt"
         >
       </div>
       <!-- End Col -->
