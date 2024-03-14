@@ -12,7 +12,6 @@ const { data } = await useAsyncData('hero', () => queryContent('home').findOne()
   <!-- Hero -->
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Grid -->
-    {{ data?.heroSection }}
     <div class="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
       <div class="lg:col-span-3">
         <h1
