@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const { headline = 'Build Better Products', subHeadline = 'Introducing a new way for your brand to reach the creative community.', heroImage } = defineProps<{
-  headline?: string
-  subHeadline?: string
-  heroImage: { src: string, alt: string }
-}>()
+// const { headline = 'Build Better Products', subHeadline = 'Introducing a new way for your brand to reach the creative community.', heroImage } = defineProps<{
+//   headline?: string
+//   subHeadline?: string
+//   heroImage: { src: string, alt: string }
+// }>()
+const { data } = await useAsyncData('hero', () => queryContent('home', 'sections', 'hero').findOne())
 </script>
 
 <template>
@@ -15,10 +16,10 @@ const { headline = 'Build Better Products', subHeadline = 'Introducing a new way
         <h1
           class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white"
         >
-          {{ headline }}
+          {{ data?.headline }}
         </h1>
         <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">
-          {{ subHeadline }}
+          {{ data?.subHeadline }}
         </p>
 
         <div
@@ -195,8 +196,8 @@ const { headline = 'Build Better Products', subHeadline = 'Introducing a new way
       <div class="lg:col-span-4 mt-10 lg:mt-0">
         <img
           class="w-full rounded-xl"
-          :src="heroImage.src"
-          :alt="heroImage.alt"
+          :src="data?.heroImage.src"
+          :alt="data?.heroImage.alt"
         >
       </div>
       <!-- End Col -->
