@@ -5,4 +5,7 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light',
   },
+  vue: {
+    propsDestructure: true,
+  },
 })
