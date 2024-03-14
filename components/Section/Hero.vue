@@ -4,23 +4,24 @@
 //   subHeadline?: string
 //   heroImage: { src: string, alt: string }
 // }>()
-// const { data } = await useAsyncData('hero', () => queryContent('home', 'sections', 'hero').findOne())
-const { content: { index: { heroSection: { headline, subHeadline, heroImage } } } } = useAppConfig()
+const { data } = await useAsyncData('hero', () => queryContent('home').findOne())
+// const { content: { index: { heroSection: { headline, subHeadline, heroImage } } } } = useAppConfig()
 </script>
 
 <template>
   <!-- Hero -->
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Grid -->
+    {{ data?.heroSection }}
     <div class="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
       <div class="lg:col-span-3">
         <h1
           class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white"
         >
-          {{ headline }}
+          {{ data?.heroSection?.headline }}
         </h1>
         <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">
-          {{ subHeadline }}
+          {{ data?.heroSection?.subHeadline }}
         </p>
 
         <div
@@ -197,8 +198,8 @@ const { content: { index: { heroSection: { headline, subHeadline, heroImage } } 
       <div class="lg:col-span-4 mt-10 lg:mt-0">
         <img
           class="w-full rounded-xl"
-          :src="heroImage.src"
-          :alt="heroImage.alt"
+          :src="data?.heroSection?.heroImage?.src"
+          :alt="data?.heroSection?.heroImage?.alt"
         >
       </div>
       <!-- End Col -->
