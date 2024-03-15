@@ -4,7 +4,7 @@
 //   subHeadline?: string
 //   heroImage: { src: string, alt: string }
 // }>()
-const { data } = await useAsyncData('hero', () => queryContent('home').findOne())
+const { data } = await useAsyncData('hero', () => queryContent('/').findOne())
 // const { content: { index: { heroSection: { headline, subHeadline, heroImage } } } } = useAppConfig()
 </script>
 
