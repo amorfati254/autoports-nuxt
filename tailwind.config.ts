@@ -1,10 +1,10 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
-  content: [],
-  darkMode: "class",
+  content: ['docs/content/**/*md'],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
   plugins: [],
-};
+}

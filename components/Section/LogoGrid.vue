@@ -6,7 +6,7 @@
       <h2
         class="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-gray-200"
       >
-        Trusted by Open Source, enterprise, and more than 99,000 of you
+        In Compliance and Collaboration with the Following Agencies
       </h2>
     </div>
     <!-- End Title -->
@@ -267,7 +267,7 @@
           250+
         </h4>
         <h4 class="text-sm text-gray-600 dark:text-gray-400">
-          Components
+          Clients
         </h4>
       </div>
       <!-- End Col -->
@@ -276,10 +276,10 @@
         <h4
           class="text-xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200"
         >
-          160+
+          5000+
         </h4>
         <h4 class="text-sm text-gray-600 dark:text-gray-400">
-          Starter Pages & Examples
+          Containers per Month
         </h4>
       </div>
       <!-- End Col -->
@@ -291,7 +291,7 @@
           10+
         </h4>
         <h4 class="text-sm text-gray-600 dark:text-gray-400">
-          Tailwind CSS Plugins
+          Years of Experience
         </h4>
       </div>
       <!-- End Col -->
